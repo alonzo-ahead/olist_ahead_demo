@@ -1,0 +1,47 @@
+packages
+
+1. Data Analysis 
+2. Filtering Through Data 
+3. Dataiku and Data Modeling (Explain the source of the data, what the variables mean and how Dataiku Helped)
+4. Dashboard (Optional) Dataiku Dashboard SCRAPPED
+5. Credits and Acknowledgements 
+
+
+To Do 
+
+Map Prep 
+1. Use joins to make a "state name" and a "state region" column. 
+2. Use Another Set of Joins to make longitude and lattitude columns for city names. May have to utilize Pandas method to get rid of accents and to use title case. 
+
+Geographic Analysis 
+Make the maps. 
+
+Fix the Bar Chart to make it go in descending order and to make the color of the columns non scalar. 
+
+Add Analysis. Discuss LIMITATIONS of the dataset. 
+
+
+Add Other Pages In with images and writting.
+
+
+
+Final Todo List 
+1. Add a Scatter Plot for Payments and Payment Values maybe line of best fit 
+2. Add Correlation for installments and payment_value 
+3. Add picture of regions of Brazil 
+4. Add hour histogram 
+
+5. Add in Filters for Data
+
+Region - customer and seller 
+Date 
+City State 
+Product_category 
+Rating 
+
+Slider Time to delivery 
+
+7. Add More Lottie Images/ Maybe download access 
+
+
+

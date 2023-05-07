@@ -1,0 +1,13 @@
+Must activate the virtual environment "olist" before editing the project.
+
+Also at the end of the project a requirements.txt file needs to be generated to fascilitate opening up this project on other computers and hosting this project in the cloud. 
+
+
+To activate the virtual environment again.
+
+env_name\Scripts\activate.bat
+
+In this case 
+
+olist\Scripts\activate.bat
+
