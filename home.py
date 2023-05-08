@@ -19,7 +19,7 @@ import json
 
 #Image In Sidebar 
 with st.sidebar.container():
-    image = Image.open(r"images\pictures\ahead_transparent_edit2.png")
+    image = Image.open(os.path.join(r"images\pictures\ahead_transparent_edit2.png"))
     st.image(image, use_column_width=True)
     
     
