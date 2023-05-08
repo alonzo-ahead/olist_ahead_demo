@@ -19,7 +19,7 @@ import json
 
 #Image In Sidebar 
 with st.sidebar.container():
-    image = Image.open(r"images/pictures/ahead_transparent_edit2.png")  
+    image = Image.open(r"images\pictures\ahead_transparent_edit2.png")
     st.image(image, use_column_width=True)
     
     
@@ -384,7 +384,7 @@ def quick_data_section_count(column_to_split):
         bar_chart_count(column_to_split)
     
     
-    #barchart_maker_sum(column_to_split, "payment_value")
+    barchart_maker_sum(column_to_split, "payment_value")
     
    
     tab3, tab4, tab5, tab6 = st.tabs([f"Yr Count of {column_title}", f"Monthly Count of {column_title}", f"Year/Month Count By {column_title}", f"Daily Count By {column_title}"])
@@ -512,17 +512,17 @@ col1, col2 = st.columns(2)
 
 with col1:
     #man_shop = load_lottieurl("https://assets2.lottiefiles.com/packages/lf20_rVEgYArLER.json")
-    man_shop = import_json(r"images/lotties/ecommerce-online-banner.json")
+    man_shop = import_json(r"images\lotties\ecommerce-online-banner.json")
     st_lottie(man_shop, height = 300, key = "man_shop")
 
 with col2:
     #collab = load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_jneva4pr.json")
-    collab = import_json(r"images/lotties/84631-team-ecommerce.json")
+    collab = import_json(r"images\lotties\84631-team-ecommerce.json")
     st_lottie(collab, height = 300, key = "collab")
 
 st.header("About The Dataset 📈")
-st.write("""The dataset that was chosen for this demonstration was published by a Brazilian E-Commerce company called Olist. Olist gave the public access to real anonymized data. The data tracks about 100,000 orders from 2016-2018. The dataset collects a plethora 
-         of information from customers including customer location, price, payment, shipping information, and much more. Due to the fact that the data comes from real life customer purchases (instead of artificially generated data) all of the insights shown in this 
+st.write("""The dataset that was chosen for this demonstration was published by a Brazillian E-Commerce company called Olist. Olist gave the public access to real anonymized data. The data tracks about 100,000 orders from 2016-2018. The dataset collects a plethora 
+         of informattion from customers including customer location, price, payment, shipping information, and much more. Due to the fact that the data comes from real life customer purchases (instead of artificially generated data) all of the insights shown in this 
          demo is pertinent to the real world and could be use to augment sales strategy and customer satisfaction.
          """)
 
@@ -535,7 +535,7 @@ st.write("""The dataset that was chosen for this demonstration was published by 
 st.subheader("Why Utilize Dataiku?")
 st.write("""Dataiku has been instrumental in making this project possible. AHEAD is a proud partner partner of Dataiku. Dataiku is typically thought as a artificial intelligence and machine learning platform. In reality Dataiku is much more than that.
          Dataiku also enables its users to do advanced data engineering and wrangling tasks without having to write a single line of code. By using Dataiku we were able to clean and combine data from across 9 different files into one comprehensible CSV that is ready
-         for analysis. In addition to create impressive visualizations without having to leave the platform. The data engineering/wrangling and the in house visualizations will be expounded upon in separate sections. 
+         for analysis. In addition to create impressive visualizations without having to leave the platform. The data engineering/wrangling and the in house visualizations will be expounded upon in seperate sections. 
          """)
 st.success("See how Dataiku made this project possible on the Dataiku page of this project.", icon = "✅")
 
@@ -545,12 +545,12 @@ st.write("Without further ado let the analytics commence!")
 st.header("Filtering The Data")
 
 #filter1 = load_lottieurl("https://assets8.lottiefiles.com/packages/lf20_8NgueIxoD0.json")
-filter1 = import_json(r"images/lotties/purple_filter.json")
+filter1 = import_json(r"images\lotties\purple_filter.json")
 st_lottie(filter1, height = 300, key = "dark_filter")
 
-st.write("In order to help answer adhoc questions and to mitigate idiosyncrasies of the dataset, users will be able to filter through the data. It is important to keep in mind that any analysis provided below is only pertinent to the unfiltered dataset.")
+st.write("In order to help answer adhoc questions and to mitigate idiosyncracies of the dataset, users will be able to filter through the data. It is important to keep in mind that any analysis provided below is only pertinent to the unfiltered dataset.")
 with st.expander("Click to See the Filters"):
-    st.warning("Data scrubbing is beyond the scope of this demonstration. Some filters may not work as expected. For example the customer city 'Sao Vicente' was assigned 8 different states in the Olist dataset instead of just one. In addition to this one distinct state can be listed as pertaining to several regions which is not congruent with reality. Filters are likely to be pretty accurate in most cases but far from perfect.", icon = "🚨")
+    st.warning("Data scrubbing is beyond the scope of this demonstration. Some filters may not work as expected. For example the customer city 'Sao Vicente' was assigned 8 different states in the olist dataset instead of just one. In addition to this one distinct state can be listed as pertaining to several regions which is not congruent with reality. Filters are likely to be pretty accurate in most cases but far from perfect.", icon = "🚨")
     mask = slide_creator("payment_value", 20.0) & slide_creator("review_score", 1.0) & multi_choose("Region_Customer") & multi_choose("State_Customer") &  multi_choose("Region_Seller") & multi_choose("State_Seller") & multi_choose("product_category_name_english") & multi_choose("order_status") & multi_choose("payment_type") #& multi_choose("customer_city")
     
 df = df[mask]
@@ -770,7 +770,7 @@ create_bubble_map(df, 'city_lat_seller', 'city_lng_seller', 'seller_city','payme
 st.caption("The second map shows customer zip codes coordinates grouped together by city for buyers. The right map shows zip code coordinates grouped together by city for sellers. Evidently there are fewer sellers than buyers.")
 
 with st.expander("See Regional Map of Brazil"):
-    region_image = Image.open(r"images/pictures/brazil-regions-states_basic.jpg")
+    region_image = Image.open(r"images\pictures\brazil-regions-states_basic.jpg")
     st.image(region_image, caption = "Map created by iheartbrazil.com")
     
 
@@ -781,16 +781,16 @@ col1, col2 = st.columns(2)
 
 with col1:
     #unload_truck = load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_toa6tsan.json")
-    unload_truck = import_json(r"images/lotties/unload_truck.json")
+    unload_truck = import_json(r"images\lotties\unload_truck.json")
     st_lottie(unload_truck, height = 300, key = "unloading")
 
 with col2:
     #handoff = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_3tryizhw.json")
-    handoff = import_json(r"images/lotties/handoff.json")
+    handoff = import_json(r"images\lotties\handoff.json")
     st_lottie(handoff, height = 300, key = "delivery_handoff")
 
 #biker = load_lottieurl("https://assets2.lottiefiles.com/packages/lf20_vvx1ff1l.json")
-biker = import_json(r"images/lotties/motorcycle-delivery.json") 
+biker = import_json(r"images\lotties\motorcycle-delivery.json") 
 st_lottie(biker, height = 500, key = "bike_deliver")
 
 st.write("In this sub section we will explore how goods are transported between buyers and sellers amongst other things. This will be done using Parallel Category Diagrams. Parallel Category Diagrams are similar to Sankey Charts/Alluvial diagrams.")
@@ -846,18 +846,18 @@ with pcol4:
 # Customer Region
 quick_data_section("Region_Customer")
 
-#barchart_maker_sum("Region_Customer", "payment_value")
-#make_pie("Region_Customer")
+barchart_maker_sum("Region_Customer", "payment_value")
+make_pie("Region_Customer")
 
 quick_data_section("State_Customer")
 
 #City Analysis Takes too much power
 #quick_data_section("customer_city")
 
-#barchart_maker_sum("State_Customer", "payment_value")
-#make_pie("Region_Customer")
-#make_pie("State_Customer")
-#bar_chart_count("State_Customer")
+barchart_maker_sum("State_Customer", "payment_value")
+make_pie("Region_Customer")
+make_pie("State_Customer")
+bar_chart_count("State_Customer")
 
 barchart_maker_sum("customer_city", "payment_value")
 
@@ -966,14 +966,7 @@ st.divider()
 # Need to investigate histogram for delivery days taken 
 
 # NOTE Need to add functionality to make the histogram a custom size but have the default size be normal. 
-st.header("Shipping Analysis")
-
-with st.expander("Shipping Analysis Consideration"):
-    st.write("""The data definitely has some inaccuracies. For example certain cities are assigned to several different states erroneously when it should only pertain to one. Some data in this section may have been recorded
-         improperly. For example some orders took over a hundred days to deliver. Also some people are recorded receiving a package over a hundred days before its estimated arrival time.
-         
-         """)
-    st.write("Scrubbing the data is both not feasiable and is outside the scope of the project. While some of the outliers are likely legitimate some of them may represent a scenario that is virtually impossible. For this section, outliers should not overly sway one's conclusion.")
+st.header("Shiping Analysis")
 
 st.subheader("Days Taken to Deliver Histogram")
 histogram("delivery_days_taken")

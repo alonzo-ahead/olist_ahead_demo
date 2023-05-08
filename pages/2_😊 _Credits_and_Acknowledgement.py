@@ -23,7 +23,7 @@ st.set_page_config(
 
 #Image In Sidebar 
 with st.sidebar.container():
-    image = Image.open(r"images\pictures\ahead_transparent_edit2.png")
+    image = Image.open(r"images/pictures/ahead_transparent_edit2.png")
     st.image(image, use_column_width=True)
 
 # ahead_transparent.png
@@ -48,7 +48,7 @@ def import_json(path):
 st.title("Credits and Acknowledgements")
 
 #awards = load_lottieurl("https://assets6.lottiefiles.com/private_files/lf30_mn5tqu4c.json")
-awards = import_json(r"images\lotties\award.json")
+awards = import_json(r"images/lotties/award.json")
 st_lottie(awards, height = 300, key = "awards")
 
 st.header("Other Datasets")
@@ -56,7 +56,7 @@ st.write("There were other datasets utilized for this project besides the 9 Olis
 
 st.write("One of the other datasets was scraped from a website called 'brazil-help.com'. This dataset gave the full name of the state. The olist dataset only gave the two letter abbreviation. For example São Paulo was shown as SP in the Olist dataset. Joining this dataset to the list dataset also gave the region the state is located in.")
 
-st.write("The other dataset came from Simplemaps. This allowed us to be able to get the coordinates of Brazillian cities as well as many other cities from around the world. The Olist dataset only gives the coordinates of the zip codes of the customers. With the Simple Maps dataset we could obtain the coordinates of the Brazillian cities after the join.")
+st.write("The other dataset came from Simplemaps. This allowed us to be able to get the coordinates of Brazillian cities as well as many other cities from around the world. The Olist dataset only gives the coordinates of the zip codes of the customers. With the Simple Maps dataset we could obtain the coordinates of the Brazilian cities after the join.")
 
 st.write("These datasets were joined in Pandas for logistical reasons. These joinings could also have been performed in Dataiku using code recipes.")
 
@@ -86,7 +86,7 @@ with st.expander("Click to See Lottiefiles URLs etc."):
     Order Handoff  \n
     https://lottiefiles.com/89626-order-delivery  \n
 
-    Mortorcycle Delivery  \n
+    Motorcycle Delivery  \n
     https://lottiefiles.com/50434-motorcycle-delivery \n
 
     Coffee Data \n
@@ -126,7 +126,7 @@ st.header("Project Credits")
 
 st.subheader("About AHEAD")
 
-ahead_logo = Image.open(r"images\pictures\AHEAD-Logo.jpg")
+ahead_logo = Image.open(r"images/pictures/AHEAD-Logo.jpg")
 st.image(ahead_logo)
 
 st.write("AHEAD builds platforms for digital business. By stitching together advances in Cloud, Automation, Operations, Security and DevOps, we help clients deliver on the promise of digital transformation.")

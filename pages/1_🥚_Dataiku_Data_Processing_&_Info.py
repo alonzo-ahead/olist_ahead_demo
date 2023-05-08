@@ -23,7 +23,7 @@ st.set_page_config(
 
 #Image In Sidebar 
 with st.sidebar.container():
-    image = Image.open(r"images\pictures\ahead_transparent_edit2.png")
+    image = Image.open(r"images/pictures/ahead_transparent_edit2.png")
     st.image(image, use_column_width=True)
 
 def load_lottieurl(url):
@@ -47,17 +47,17 @@ def import_json(path):
 
 st.title("Dataiku Data Processing")
 
-dataiku_logo = Image.open(r"images\pictures\DataikuStraight.jpg")
+dataiku_logo = Image.open(r"images/pictures/DataikuStraight.jpg")
 st.image(dataiku_logo, caption = "Dataiku was instrumental in creating this projectas you'll se on this page.")
 
 st.write("\n")
 
 st.write("As mentioned before this dataset came from Kaggle and was provided by Olist. Olist is the biggest E-commerce website in Brazil. On this page we will explore how Dataiku made processing complicated datasets possible.")
 
-st.write("The dataset is special because it provides real world anonymized data that was colllected over the course of several years. The dataset was broken up into 9 different CSV files. In order for the data to be ready for analytics the data had to be processed and joined.")
+st.write("The dataset is special because it provides real world anonymized data that was collected over the course of several years. The dataset was broken up into 9 different CSV files. In order for the data to be ready for analytics the data had to be processed and joined.")
 
 #coffee_data = load_lottieurl("https://assets8.lottiefiles.com/packages/lf20_chws1oam.json")
-coffee_data = import_json(r"images\lotties\coffee_data.json")
+coffee_data = import_json(r"images/lotties/coffee_data.json")
 st_lottie(coffee_data, height = 399, key = "drink_data")
 
 st.divider()
@@ -103,7 +103,7 @@ with order_payments:
              """)
 
 with order_reviews:
-    st.subheader("Order_Reviews Datataset (5/9)")
+    st.subheader("Order_Reviews Dataset (5/9)")
     st.write("""review_id - unique review identifier  \n
              order_id - unique order identifier  \n
              review_score - Note ranging from 1 to 5 given by the customer on a satisfaction survey. \n
@@ -129,8 +129,8 @@ with product_dataset:
     st.subheader("Product Dataset (7/9)")
     st.write("""product_id - unique product identifier  \n
              product_category_name - root category of product, in Portuguese. \n
-             product_name_lenght - number of characters extracted from the product name. \n
-             product_description_lenght - number of characters extracted from the product description. \n
+             product_name_length - number of characters extracted from the product name. \n
+             product_description_length - number of characters extracted from the product description. \n
              product_photos_qty - number of product published photos \n
              product_weight_g - product weight measured in grams.
              product_length_cm - product length measured in centimeters. \n
@@ -154,17 +154,17 @@ with category_name:
              """)
 st.divider()
 # Post Image of the provided data model 
-brazil_data_model = Image.open(r"images\pictures\brazil_data_model.png")
+brazil_data_model = Image.open(r"images/pictures/brazil_data_model.png")
 st.image(brazil_data_model, caption = "Data model of the dataset provided by Olist.")
     
 
 st.write("""Joining these 9 datasets together would be a Herculean task in most cases. Typically one would have to used a flavor of SQL or Python Pandas in order to join the data together. With Dataiku the joins were able to be made without having to write a single line of code!
-         However joining the datasets was only half of the battle. In addition to this, Dataiku made it easy to process data using data preperation recipes. For, this project code recipes were used to format dates and coordinates (i.e longitude and lattitude).
+         However joining the datasets was only half of the battle. In addition to this, Dataiku made it easy to process data using data preparation recipes. For, this project code recipes were used to format dates and coordinates (i.e longitude and latitude).
          
          """)
 
 #strong_guy = load_lottieurl("https://assets1.lottiefiles.com/packages/lf20_JkRdsa6Exx.json")
-strong_guy = import_json(r"images\lotties\strong_man.json")
+strong_guy = import_json(r"images/lotties/strong_man.json")
 st_lottie(strong_guy, height = 399, key = "lifter")
 st.caption("Dataiku makes data projects easier by doing a lot of the heavy lifting for you. Many complicated transformation can be done with zero lines of code required.")
 
@@ -172,7 +172,7 @@ st.write("\n \n")
 
 st.subheader("Dataiku Flow")
 st.write("With Dataiku we could join the data tables with ease. Zero code required!")
-dataiku_flow = Image.open(r"images\pictures\dataiku_flow.png")
+dataiku_flow = Image.open(r"images/pictures/dataiku_flow.png")
 st.image(dataiku_flow, caption = "Dataiku flow for joining the data tables and processing the data.")
 
 st.write("\n \n")
@@ -184,7 +184,7 @@ st.header("Visualization in Dataiku")
 dashboard = load_lottieurl("https://assets2.lottiefiles.com/packages/lf20_acryqbdv.json")
 st_lottie(dashboard, height = 399, key = "dashboard")
 
-st.write("Dataiku is not only a good place to for data wrangling. It is also a great place to visualize the data. Below there will be screenshots of vizualizations that were created in Dataiku. These interactive visualizations help give critical analytics information in an aestethically pleasing manner.")
+st.write("Dataiku is not only a good place to for data wrangling. It is also a great place to visualize the data. Below there will be screenshots of visualizations that were created in Dataiku. These interactive visualizations help give critical analytics information in an aestethically pleasing manner.")
 #st.info("Note that there may be virtually negligible differences between the Dataiku visualizations and the ones displayed in this Streamlit app as certain rows had to be dropped to prevent errors. This will be explained in the Credits and Acknowledgement section of this web application.", icon = "ℹ")
 
 
@@ -193,39 +193,39 @@ st.write("Dataiku is not only a good place to for data wrangling. It is also a g
 
 st.warning("Utilize the directional buttons to navigate between the images.", icon = "⚠")
 
-tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs(["Map", "Delivery Date Vs. Actual", "Histogram of Customer City", "Pie Chart of Order Status", "Map of Customer Orders", "Price Payment Instsllments", "Price Vs Weight", "Spearman Correlation"])
+tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs(["Map", "Delivery Date Vs. Actual", "Histogram of Customer City", "Pie Chart of Order Status", "Map of Customer Orders", "Price Payment Installments", "Price Vs Weight", "Spearman Correlation"])
 
 with tab1:
     st.subheader("Dataiku Image (1/8): Averages ")
-    average = Image.open(r"images\pictures\average_cards.png")
+    average = Image.open(r"images/pictures/average_cards.png")
     st.image(average, caption = "KPI cards that show various averages.")
 with tab2:
     st.subheader("Dataiku Image (2/8): Estimation vs Actual Delivery Date")
-    estimate = Image.open(r"images\pictures\estimation_vs_actual.png")
+    estimate = Image.open(r"images/pictures/estimation_vs_actual.png")
     st.image(estimate, caption = "A graph that shows the estimated delivery date vs the actual one.")
 with tab3:
     st.subheader("Dataiku Image (3/8): Histogram of Customer City")
-    customer_city = Image.open(r"images\pictures\histogram_customer_city.png")
+    customer_city = Image.open(r"images/pictures/histogram_customer_city.png")
     st.image(customer_city, "Histogram of top ")
 with tab4:
     st.subheader("Dataiku Image (4/8):Pie Chart of Order Status")
-    pie = Image.open(r"images\pictures\pie_chart.png")
+    pie = Image.open(r"images/pictures/pie_chart.png")
     st.image(pie, "Pie chart of delivery status.")
 with tab5:
     st.subheader("Dataiku Image (5/8): Map of Customer Orders")
-    map = Image.open(r"images\pictures\map_sa.png")
+    map = Image.open(r"images/pictures/map_sa.png")
     st.image(map, "Map of customer orders in Brazil.")
 with tab6:
     st.subheader("Dataiku Image (6/8): Price Payment Installments")
-    price = Image.open(r"images\pictures\price_payment_installments.png")
+    price = Image.open(r"images/pictures/price_payment_installments.png")
     st.image(price, "Payment Installments and Prices")
 with tab7:
     st.subheader("Dataiku Image (7/8): Price vs. Weight")
-    price_weight = Image.open(r"images\pictures\price_vs_weight.png")
+    price_weight = Image.open(r"images/pictures/price_vs_weight.png")
     st.image(price_weight, "Price vs weight chart.")
 with tab8:
     st.subheader("Dataiku Image (8/8): Spearman Correlation")
-    correlation = Image.open(r"images\pictures\spearman_correlation.png")
+    correlation = Image.open(r"images/pictures/spearman_correlation.png")
     st.image(correlation, "Spearman Correlation Table")
     
     
@@ -234,7 +234,7 @@ st.write("Keep in mind that the visuals created in Dataiku are powered by Plotly
 st.header("This Project Was Made Possible By Dataiku!")
 
 #party = load_lottieurl("https://assets1.lottiefiles.com/packages/lf20_6aYlBl.json")
-party = import_json(r"images\lotties\party.json")
+party = import_json(r"images/lotties/party.json")
 
 st_lottie(party, height = 399, key = "celebration")
 st.write("To see how Dataiku can help your data workflow visit their website.")
