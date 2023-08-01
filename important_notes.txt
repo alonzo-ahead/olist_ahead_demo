@@ -5,6 +5,9 @@ https://brazil-help.com/brazilian_states.htm
 Information Regarding Coordinates of Brazil Cities (See File for Propper Attribution)
 https://simplemaps.com/data/world-cities
 
+To see the process of joing the other datasets please see: 
+REAL_RECTIFIED_map_making.ipynb
+
 --------------------------------------------------------------------------------------------------------------
 
 Man Shops With Cart Online - Jagrav Computer
